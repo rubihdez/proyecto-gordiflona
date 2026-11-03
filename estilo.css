@@ -1,0 +1,1071 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5e8ca;
+}
+
+.contenedor {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER / HERO
+   ========================================================= */
+.header-hero {
+  background-image: linear-gradient(rgba(245, 232, 202, 0.72), rgba(245, 232, 202, 0.72)), url("imagenes/gorditassss.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-hero h1 {
+  font-family: "Cinzel", serif;
+  color: #8C2D19;
+  font-size: 2.8rem;
+  margin: 0 0 0.8rem 0;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.contenido-hero h2 {
+  font-family: "Cormorant Garamond", serif;
+  color: #222222;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+/* =========================================================
+    BARRA DE NAVEGACIÓN
+   ========================================================= */
+.navegador {
+  background-color: #0C5335;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contenido-navegador {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.logo-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+.logo-img {
+  height: 55px !important;
+  max-width: 120px !important;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* Menú de navegación */
+.navegacion-principal {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  margin: 0 auto;
+}
+
+.navegacion-principal a {
+  color: #F4D068;
+  text-decoration: none;
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navegacion-principal a:hover {
+  background-color: #8C2D19;
+  color: #FFFFFF;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================================
+    SECCIÓN DEL MENÚ
+   ========================================================= */
+.menu {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+/* 4.1 Encabezado del menú */
+.encabezado-menu .subtitulo-comal {
+  color: #8C2D19;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.encabezado-menu h2 {
+  font-family: "Cinzel", serif;
+  font-size: 2.3rem;
+  color: #0C5335;
+  margin: 0 0 0.6rem 0;
+}
+
+.encabezado-menu p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  color: #4a4a4a;
+  margin: 0 0 2rem 0;
+}
+
+/* 4.2 Pestañas de categorías */
+.categorias-tabs {
+  display: inline-flex;
+  background-color: #ebdcb9;
+  padding: 6px;
+  border-radius: 12px;
+  gap: 6px;
+  margin-bottom: 2.5rem;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 10px 24px;
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #222222;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.activo,
+.tab-btn:hover {
+  background-color: #0C5335;
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Grid de tarjetas */
+.grid-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  text-align: left;
+}
+
+/* Tarjeta individual */
+.tarjeta-platillo {
+  background-color: #ffffff;
+  border: 1px solid #e2d3b2;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+}
+
+/* Efecto hover en la tarjeta */
+.tarjeta-platillo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*  Imagen y etiqueta de precio */
+.imagen-contenedor {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.imagen-contenedor img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.precio-tag {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background-color: #0C5335;
+  color: #FFFFFF;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/*  Contenido de la tarjeta */
+.contenido-tarjeta {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.contenido-tarjeta h3 {
+  font-family: "Cinzel", serif;
+  font-size: 1.15rem;
+  color: #0C5335;
+  margin: 0 0 0.5rem 0;
+}
+
+.contenido-tarjeta p {
+  font-family: "Truculenta", sans-serif;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+/* Pie de la tarjeta (detalle + botón Pedir) */
+.pie-tarjeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0e4ca;
+  padding-top: 0.8rem;
+  margin-top: auto;
+}
+
+.detalle-guisado {
+  color: #8C2D19;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.btn-pedir {
+  background-color: #0C5335;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-family: "Cinzel", serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* CAMBIO: ahora es un enlace <a>, esto evita el subrayado */
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-pedir:hover {
+  background-color: #8C2D19;
+}
+
+/* =========================================================
+   DESPLEGABLE DE GUISOS 
+   ========================================================= */
+.guisos-desplegable {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Botón que abre el desplegable */
+.guisos-desplegable summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0C5335;
+  background: #FAF4E8;
+  border: 1px solid #0C5335;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.guisos-desplegable summary::-webkit-details-marker {
+  display: none;
+}
+
+.guisos-desplegable summary:hover {
+  background: #0C5335;
+  color: #FFFFFF;
+}
+
+/* Lista de guisos en cuadrícula */
+.lista-guisos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-family: "Truculenta", sans-serif;
+  color: #333;
+}
+
+.lista-guisos li {
+  font-family: "Truculenta", sans-serif;
+  font-size: 0.85rem;
+  color: #333;
+  background: #FFFDF7;
+  border: 1px dashed #e2d3b2;
+  border-radius: 8px;
+  padding: 6px 8px;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.lista-guisos li:hover {
+  border-style: solid;
+  border-color: #8C2D19;
+  color: #8C2D19;
+}
+
+/*        
+   ========== UBICACIÓN Y HORARIOS ========== */
+
+.seccion-ubicacion{
+  
+  padding: 64px 16px;
+}
+
+.seccion-ubicacion h2{
+  text-align:center;
+  margin-bottom: 26px;
+  font-weight: 900;
+  letter-spacing: .8px;
+  color: #0e602c;
+}
+
+
+.grid-ubicacion{
+  max-width: 760px;          
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;    /* centra la tarjeta */
+  align-items: center;
+  gap: 18px;
+}
+
+/* Tarjeta */
+.datos-contacto{
+  width: 100%;
+  background: rgba(255,255,255,.95);
+  border: 1px solid rgba(12,21,45,.08);
+  border-radius: 18px;
+  padding: 26px 22px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+
+.datos-contacto p{
+  margin: 0 0 14px;
+  color: #19240f;
+  font-size: 1.02rem;
+  line-height: 1.55;
+
+  /* para que los íconos queden alineados bonito */
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+
+.datos-contacto p:last-child{
+  margin-bottom: 0;
+}
+
+.datos-contacto strong{
+  color: #023408;
+  font-weight: 950;
+}
+
+
+.datos-contacto p strong::before{
+ 
+  content: "";
+}
+
+
+.datos-contacto p{
+  padding-bottom: 12px;
+  border-bottom: 1px dashed rgba(12,21,45,.15);
+}
+
+.datos-contacto p:last-child{
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 480px){
+  .seccion-ubicacion{
+    padding: 48px 14px;
+    margin-bottom: 60px
+  }
+
+  .seccion-ubicacion h2{
+    margin-bottom: 18px;
+    font-size: 1.45rem;
+    
+  }
+
+  .grid-ubicacion{
+    max-width: 100%;
+  }
+
+  .datos-contacto{
+    padding: 18px 16px;
+    border-radius: 16px;
+  }
+
+  .datos-contacto p{
+    font-size: .98rem;
+    gap: 9px;
+  }
+}
+
+.datos-contacto p:last-child{
+  margin-bottom: 0;
+}
+
+.datos-contacto strong{
+  color: var(--dark);
+  font-weight: 800;
+}
+
+/* ========== FOOTER ========== */
+footer#contacto{
+  background: #123b11;
+  color: rgba(255,255,255,.92);
+  padding: 26px 18px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+footer#contacto p{
+  margin: 0 0 14px;
+  color: rgba(255,255,255,.78);
+}
+
+.redes-sociales{
+  display:flex;
+  justify-content:center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.redes-sociales a{
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.redes-sociales a:hover{
+  transform: translateY(-2px);
+  background: rgba(255,183,3,.18);
+  border-color: rgba(255,183,3,.35);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px){
+  .grid-ubicacion{
+    grid-template-columns: 1fr;
+  }
+  .mapa-frame iframe{
+    min-height: 220px;
+  }
+}
+
+/* Suave mejora en móviles */
+@media (max-width: 480px){
+  .seccion-nosotros,
+  .seccion-ubicacion{
+    padding: 44px 14px;
+  }
+  .seccion-nosotros .nosotros-contenido{
+    padding: 20px 16px;
+  }
+  .datos-contacto{
+    padding: 18px;
+  }
+}
+
+/* =========================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================= */
+@media (max-width: 768px) {
+  .header-hero {
+    padding: 2.5rem 1rem;
+    min-height: 180px;
+  }
+
+  .contenido-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .contenido-hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .contenido-navegador {
+    position: relative;
+  }
+
+  .navegacion-principal {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navegacion-principal a {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .encabezado-menu h2 {
+    font-size: 1.8rem;
+  }
+
+  .categorias-tabs {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .tab-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lista-guisos {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========================================================================
+      Seccion de nosotros
+   ========================================================================= */
+
+/* Scroll suave al darle clic al menú (INICIO, MENÚ, NOSOTROS, etc.) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- NOSOTROS ---------- */
+.seccion-nosotros {
+  padding: 4rem 0;
+}
+
+/* Grid de 2 columnas: foto + texto */
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nosotros-foto img {
+  display: block;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #e2d3b2;
+  box-shadow: 10px 10px 0 #0C5335;
+  background-color: #ebdcb9;
+}
+
+.nosotros-contenido .subtitulo-comal {
+  color: #8C2D19;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.nosotros-contenido h2 {
+  font-family: "Cinzel", serif;
+  font-size: 2.3rem;
+  color: #0C5335;
+  margin: 0 0 1rem 0;
+}
+
+.nosotros-contenido p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #3b3b3b;
+  margin: 0 0 1rem 0;
+}
+
+/* Datos con flexbox */
+.nosotros-datos {
+  list-style: none;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.nosotros-datos li {
+  background-color: #0C5335;
+  color: #FFFFFF;
+  font-family: "Truculenta", sans-serif;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+  border-radius: 12px;
+}
+
+.nosotros-datos strong {
+  display: block;
+  color: #F4D068;
+  font-family: "Cinzel", serif;
+  font-size: 0.95rem;
+}
+
+/* Tarjetas de valores: grid de 3 columnas */
+.valores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin-top: 3rem;
+}
+
+.valor {
+  background-color: #ffffff;
+  border: 1px solid #e2d3b2;
+  border-top: 5px solid #F4D068;
+  border-radius: 16px;
+  padding: 1.4rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.valor:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.valor h3 {
+  font-family: "Cinzel", serif;
+  font-size: 1.1rem;
+  color: #0C5335;
+  margin: 0 0 0.5rem 0;
+}
+
+.valor p {
+  font-family: "Truculenta", sans-serif;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ---------- PEDIDO Y PAGO ---------- */
+.seccion-pedido {
+  background-color: #ebdcb9;
+  padding: 4rem 0;
+}
+
+/* Grid: formulario ancho + tarjeta de pago angosta */
+.pedido-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  align-items: start;
+}
+
+.pedido-form,
+.pago-info,
+.carrito {
+  background-color: #ffffff;
+  border: 1px solid #e2d3b2;
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.pedido-form h2,
+.pago-info h3,
+.carrito h3 {
+  font-family: "Cinzel", serif;
+  color: #0C5335;
+  margin: 0 0 1rem 0;
+}
+
+.pedido-form label {
+  display: block;
+  margin: 1rem 0 0.4rem 0;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #222222;
+}
+
+.pedido-form input[type="text"],
+.pedido-form input[type="tel"],
+.pedido-form select,
+.pedido-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font-family: "Truculenta", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  background-color: #FFFDF7;
+  border: 1px solid #e2d3b2;
+  border-radius: 8px;
+}
+
+/* Resalta el campo que estás llenando */
+.pedido-form input:focus,
+.pedido-form select:focus,
+.pedido-form textarea:focus {
+  outline: none;
+  border-color: #0C5335;
+  box-shadow: 0 0 0 3px rgba(12, 83, 53, 0.15);
+}
+
+.pedido-form fieldset {
+  border: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.pedido-form legend {
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #222222;
+  padding: 0;
+  margin-bottom: 0.4rem;
+}
+
+.pedido-form .opcion {
+  display: inline-block;
+  margin: 0;
+  font-family: "Truculenta", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.btn-enviar {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 12px;
+  background-color: #8C2D19;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 20px;
+  font-family: "Cinzel", serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #0C5335;
+}
+
+.pago-info p {
+  font-family: "Truculenta", sans-serif;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+}
+
+.pago-info img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 0 1rem 0;
+}
+
+.pago-nota {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* ---------- RESPONSIVO DE LO NUEVO ---------- */
+@media (max-width: 800px) {
+  .nosotros-grid,
+  .valores,
+  .pedido-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-foto img {
+    height: 260px;
+  }
+
+  .nosotros-contenido h2 {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+/* ---------- Carrito en la barra de navegación ---------- */
+.carrito-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #F4D068;
+  text-decoration: none;
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(244, 208, 104, 0.5);
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.carrito-nav:hover {
+  background-color: #8C2D19;
+  color: #FFFFFF;
+  border-color: #8C2D19;
+}
+
+/* El numerito rojo: lo escribe el contador "pzas" */
+.carrito-nav__num {
+  background-color: #8C2D19;
+  color: #FFFFFF;
+  min-width: 1.4em;
+  text-align: center;
+  padding: 1px 6px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.carrito-nav:hover .carrito-nav__num {
+  background-color: #F4D068;
+  color: #8C2D19;
+}
+
+/* ---------- Filas de productos ---------- */
+.etiqueta-campo {
+  display: block;
+  margin: 1rem 0 0.4rem 0;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #222222;
+}
+
+.producto-fila {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem 1rem;
+  background-color: #FFFDF7;
+  border: 1px solid #0C5335;   /* con piezas elegidas: borde verde */
+  border-radius: 12px;
+}
+
+.contador {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contador button {
+  background-color: #0C5335;
+  color: #FFFFFF;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contador button:hover {
+  background-color: #8C2D19;
+  transform: scale(1.05);
+}
+
+.contador label {
+  font-family: "Truculenta", sans-serif;
+  font-size: 0.95rem;
+  color: #333333;
+  min-width: 1.2em;
+  text-align: center;
+}
+
+.select-guiso {
+  font-family: "Truculenta", sans-serif;
+  font-size: 0.95rem;
+  color: #333333;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #0C5335;
+  background-color: #FFFDF7;
+}
+.select-guiso option {
+  font-family: "Truculenta", sans-serif;
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+.producto-info strong {
+  display: block;
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  color: #0C5335;
+}
+
+.producto-precio {
+  font-family: "Truculenta", sans-serif;
+  font-size: 0.95rem;
+  color: #8C2D19;
+}
+
+
+/* El guiso aparece cuando ya elegiste piezas */
+.guiso-fila {
+  display: block;
+  width: 100%;
+}
+
+.guiso-fila label {
+  margin-top: 0;
+}
+
+/* ---------- Tarjeta del carrito ---------- */
+.pedido-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.carrito-vacio {
+  display: none;
+  font-family: "Truculenta", sans-serif;
+  font-style: italic;
+  color: #555555;
+  margin: 0;
+}
+
+.carrito-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carrito-lista li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e2d3b2;
+  font-family: "Truculenta", sans-serif;
+  font-size: 1rem;
+  color: #333333;
+}
+
+.carrito-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 2px solid #0C5335;
+  font-family: "Cinzel", serif;
+  color: #0C5335;
+}
+
+
+
+/* ---------- Confirmación al enviar (aparece con :target) ---------- */
+.pedido-confirmacion {
+  display: none;
+  max-width: 1000px;
+  margin-bottom: 2rem;
+  padding: 1rem 1.4rem;
+  background-color: #0C5335;
+  border-radius: 12px;
+}
+
+.pedido-confirmacion:target {
+  display: block;
+}
+
+.pedido-confirmacion p {
+  margin: 0;
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  color: #F4D068;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 800px) {
+  .pedido-lateral {
+    position: static;
+  }
+}
+

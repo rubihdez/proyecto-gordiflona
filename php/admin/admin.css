@@ -1,0 +1,397 @@
+/* =========================================================
+   ESTILOS DEL ÁREA DE ADMINISTRADOR
+   Mismos colores y letras del sitio principal
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f5e8ca;
+  font-family: "Truculenta", sans-serif;
+  color: #222222;
+}
+
+/* ---------- LOGIN ---------- */
+.pagina-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-image: linear-gradient(rgba(245, 232, 202, 0.82), rgba(245, 232, 202, 0.82)), url("../../imagenes/gorditassss.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-caja {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem 2rem 1.6rem;
+  background-color: #ffffff;
+  border: 1px solid #e2d3b2;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.login-logo img {
+  height: 70px;
+  max-width: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.login-etiqueta {
+  display: block;
+  margin-top: 1rem;
+  font-family: "Cinzel", serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #8C2D19;
+}
+
+.login-caja h1 {
+  margin: 0.3rem 0 1.2rem;
+  font-family: "Cinzel", serif;
+  font-size: 1.6rem;
+  color: #0C5335;
+}
+
+.login-form {
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  margin: 1rem 0 0.4rem;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 11px 12px;
+  font-family: "Truculenta", sans-serif;
+  font-size: 1rem;
+  background-color: #FFFDF7;
+  border: 1px solid #e2d3b2;
+  border-radius: 8px;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #0C5335;
+  box-shadow: 0 0 0 3px rgba(12, 83, 53, 0.15);
+}
+
+.btn-login {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 12px;
+  background-color: #0C5335;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-family: "Cinzel", serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #8C2D19;
+}
+
+.alerta-error {
+  margin: 0 0 0.5rem;
+  padding: 10px 12px;
+  background-color: #fbe9e5;
+  border: 1px solid #8C2D19;
+  border-radius: 8px;
+  color: #8C2D19;
+  font-size: 1rem;
+}
+
+.login-volver {
+  display: inline-block;
+  margin-top: 1.4rem;
+  color: #0C5335;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.login-volver:hover {
+  color: #8C2D19;
+}
+
+/* ---------- PANEL ---------- */
+.panel-barra {
+  background-color: #0C5335;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.panel-barra__contenido {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.panel-logo img {
+  display: block;
+  height: 55px;
+  max-width: 120px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.panel-titulo {
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #F4D068;
+}
+
+.panel-usuario {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #ffffff;
+}
+
+.btn-salir {
+  padding: 8px 16px;
+  background-color: #8C2D19;
+  color: #ffffff;
+  border-radius: 20px;
+  font-family: "Cinzel", serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-salir:hover {
+  background-color: #F4D068;
+  color: #8C2D19;
+}
+
+.panel-contenido {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.panel-bienvenida h1 {
+  margin: 0.3rem 0 0.5rem;
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  color: #0C5335;
+}
+
+.panel-bienvenida p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  color: #4a4a4a;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+.panel-tarjeta {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e2d3b2;
+  border-top: 5px solid #F4D068;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.panel-tarjeta h2 {
+  margin: 0 0 0.8rem;
+  font-family: "Cinzel", serif;
+  font-size: 1.15rem;
+  color: #0C5335;
+}
+
+.panel-tarjeta p {
+  margin: 0 0 1rem;
+  color: #555555;
+  line-height: 1.4;
+}
+
+.panel-tarjeta.apagada {
+  opacity: 0.75;
+}
+
+.proximamente {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #ebdcb9;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #8C2D19;
+}
+
+.datos-sesion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.datos-sesion li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #e2d3b2;
+  color: #333333;
+}
+
+.datos-sesion li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 600px) {
+  .panel-barra__contenido {
+    justify-content: center;
+  }
+}
+
+/* ---------- RESUMEN Y TABLAS DEL PANEL ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  padding: 1.2rem 1.5rem;
+  background-color: #0C5335;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-num {
+  font-family: "Cinzel", serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #F4D068;
+}
+
+.stat-txt {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.panel-seccion {
+  margin-top: 2.5rem;
+}
+
+.panel-seccion > h2 {
+  margin: 0 0 1rem;
+  font-family: "Cinzel", serif;
+  font-size: 1.4rem;
+  color: #0C5335;
+}
+
+.tabla-contenedor {
+  overflow-x: auto;                 /* en celular se desliza de lado */
+  background-color: #ffffff;
+  border: 1px solid #e2d3b2;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.tabla th {
+  padding: 12px 14px;
+  background-color: #ebdcb9;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  text-align: left;
+  color: #0C5335;
+  white-space: nowrap;
+}
+
+.tabla td {
+  padding: 12px 14px;
+  border-top: 1px solid #f0e4ca;
+  vertical-align: middle;
+  color: #333333;
+}
+
+.tabla tbody tr:hover {
+  background-color: #FFFDF7;
+}
+
+.tabla small {
+  color: #777777;
+}
+
+.tabla-vacia {
+  text-align: center;
+  font-style: italic;
+  color: #777777;
+}
+
+.miniatura {
+  display: block;
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.stock-bajo {
+  color: #8C2D19;
+  font-weight: bold;
+}
+
+.etiqueta-estado {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  background-color: #ebdcb9;
+  color: #333333;
+}
+
+.etiqueta-estado.ok,
+.etiqueta-estado.pagado {
+  background-color: #0C5335;
+  color: #ffffff;
+}
+
+.etiqueta-estado.pendiente {
+  background-color: #F4D068;
+  color: #3b2314;
+}
+
+.etiqueta-estado.off,
+.etiqueta-estado.cancelado {
+  background-color: #8C2D19;
+  color: #ffffff;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago | La Gordiflona</title>
+    <link rel="stylesheet" href="normalice.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body { background-color: #FFFDF7; font-family: "Truculenta", sans-serif; color: #333333; }
+        .pago-pagina { max-width: 560px; margin: 2rem auto; padding: 0 1rem; }
+        .pago-tarjeta { background: #FFFFFF; border: 1px solid #0C5335; border-radius: 12px; padding: 1.4rem; margin-bottom: 1.5rem; }
+        .pago-tarjeta h1, .pago-tarjeta h2 { font-family: "Cinzel", serif; color: #0C5335; margin-top: 0; }
+        .pago-tarjeta h1 { font-size: 1.5rem; }
+        .pago-tarjeta h2 { font-size: 1.15rem; }
+        .resumen-lista { list-style: none; margin: 0; padding: 0; }
+        .resumen-lista li { padding: 8px 0; border-bottom: 1px dashed #e2d3b2; }
+        .resumen-total { display: flex; justify-content: space-between; margin-top: 12px; padding-top: 10px; border-top: 2px solid #0C5335; font-family: "Cinzel", serif; color: #0C5335; }
+        .pago-tarjeta label { display: block; margin-top: 0.9rem; font-weight: 700; }
+        .pago-tarjeta input { width: 100%; box-sizing: border-box; padding: 8px 10px; margin-top: 4px; border: 1px solid #0C5335; border-radius: 6px; background: #FFFDF7; }
+        .fila-doble { display: flex; gap: 1rem; }
+        .fila-doble > div { flex: 1; }
+        .btn-pagar { width: 100%; margin-top: 1.4rem; padding: 12px; background: #0C5335; color: #FFFFFF; border: none; border-radius: 8px; font-family: "Cinzel", serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background-color .3s ease; }
+        .btn-pagar:hover { background: #8C2D19; }
+        .aviso-simulado { font-size: 0.9rem; font-style: italic; color: #555555; margin-top: 0.8rem; }
+        .exito { display: none; text-align: center; }
+        .exito h2 { color: #0C5335; }
+        .exito .folio { font-family: "Cinzel", serif; font-size: 1.3rem; color: #8C2D19; }
+        .btn-volver { display: inline-block; margin-top: 1rem; padding: 10px 20px; background: #0C5335; color: #F4D068; border-radius: 8px; text-decoration: none; font-family: "Cinzel", serif; }
+        .btn-volver:hover { background: #8C2D19; }
+    </style>
+</head>
+<body>
+<main class="pago-pagina">
+
+    <!-- Resumen del pedido -->
+    <section class="pago-tarjeta" id="resumen">
+        <h1>Resumen de tu pedido</h1>
+        <p>Folio: <strong id="r-folio">—</strong></p>
+        <p>Cliente: <strong id="r-nombre">—</strong> · <span id="r-tipo"></span></p>
+        <ul class="resumen-lista" id="r-detalle"></ul>
+        <div class="resumen-total"><span>Total a pagar</span><strong id="r-total">$0</strong></div>
+    </section>
+
+    <!-- Pago con PayPal -->
+    <section class="pago-tarjeta" id="bloque-pago">
+        <h2>Paga con PayPal</h2>
+        <p>Elige PayPal o paga con tarjeta de forma segura.</p>
+        <div id="paypal-botones"></div>
+        <p class="aviso-simulado" id="paypal-estado">Cargando PayPal…</p>
+    </section>
+
+    <!-- Confirmación -->
+    <section class="pago-tarjeta exito" id="exito">
+        <h2>¡Pago recibido! 🎉</h2>
+        <p>Gracias, <strong id="e-nombre"></strong>. Tu pedido ya está en el comal.</p>
+        <p class="folio" id="e-folio"></p>
+        <a class="btn-volver" id="btn-recibo" href="#" target="_blank">Descargar recibo (PDF)</a>
+        <br>
+        <a class="btn-volver" href="proyecto.html">Volver al inicio</a>
+    </section>
+
+</main>
+
+<script>
+    // Leer los datos que manda php/orden.php en la URL
+    var params = new URLSearchParams(window.location.search);
+    var folio = params.get('folio');
+    var total = params.get('total');
+
+    // Si se entra directo a pago.html sin pedido, regresar al formulario
+    if (!folio || !total) {
+        window.location.replace('proyecto.html#pedido');
+    }
+
+    document.getElementById('r-folio').textContent = folio || '';
+    document.getElementById('r-nombre').textContent = params.get('nombre') || '';
+    document.getElementById('r-tipo').textContent = params.get('tipo') || '';
+    document.getElementById('r-total').textContent = '$' + (total || 0);
+
+    var lista = document.getElementById('r-detalle');
+    (params.get('detalle') || '').split('|').forEach(function (linea) {
+        if (!linea) return;
+        var li = document.createElement('li');
+        li.textContent = linea;   // textContent evita inyección de HTML
+        lista.appendChild(li);
+    });
+
+    // PayPal: se carga el SDK con el Client ID que entrega php/paypal_config.php
+    var estado = document.getElementById('paypal-estado');
+
+    function mostrarExito() {
+        document.getElementById('e-nombre').textContent = params.get('nombre') || '';
+        document.getElementById('e-folio').textContent = 'Folio: ' + folio;
+        document.getElementById('btn-recibo').href = 'php/recibo.php?folio=' + encodeURIComponent(folio);
+        document.getElementById('resumen').style.display = 'none';
+        document.getElementById('bloque-pago').style.display = 'none';
+        document.getElementById('exito').style.display = 'block';
+    }
+
+    function iniciarPayPal() {
+        paypal.Buttons({
+            style: { layout: 'vertical', shape: 'rect', label: 'pay' },
+
+            //  El servidor crea la orden con el total real del pedido
+            createOrder: function () {
+                return fetch('php/paypal_crear.php', { method: 'POST' })
+                    .then(function (r) { return r.json(); })
+                    .then(function (res) {
+                        if (!res.ok) { throw new Error(res.error || 'No se pudo crear la orden.'); }
+                        return res.id;
+                    });
+            },
+
+            //  El cliente aprobó: el servidor captura el cobro, baja el stock y suma vendidos
+            onApprove: function (data) {
+                var datos = new FormData();
+                datos.append('folio', folio);
+                datos.append('orderID', data.orderID);
+                return fetch('php/confirmar_pago.php', { method: 'POST', body: datos })
+                    .then(function (r) { return r.json(); })
+                    .then(function (res) {
+                        if (!res.ok) { alert(res.error || 'No se pudo confirmar el pago.'); return; }
+                        mostrarExito();
+                    });
+            },
+
+            onCancel: function () { estado.textContent = 'Cancelaste el pago. Puedes intentarlo de nuevo.'; },
+            onError: function (err) { alert(err && err.message ? err.message : 'Ocurrió un error con PayPal.'); }
+        }).render('#paypal-botones');
+        estado.textContent = '';
+    }
+
+    if (folio && total) {
+        fetch('php/paypal_config.php')
+            .then(function (r) { return r.json(); })
+            .then(function (cfg) {
+                if (!cfg.client_id || cfg.client_id.indexOf('PEGA_AQUI') === 0) {
+                    estado.textContent = 'Falta configurar el Client ID de PayPal en php/config_paypal.php';
+                    return;
+                }
+                var sdk = document.createElement('script');
+                sdk.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(cfg.client_id) +
+                          '&currency=' + encodeURIComponent(cfg.moneda) + '&intent=capture';
+                sdk.onload = iniciarPayPal;
+                sdk.onerror = function () { estado.textContent = 'No se pudo cargar PayPal. Revisa tu conexión.'; };
+                document.head.appendChild(sdk);
+            })
+            .catch(function () { estado.textContent = 'No se pudo conectar con el servidor.'; });
+    }
+</script>
+</body>
+</html>

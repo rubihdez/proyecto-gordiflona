@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Gordiflona | Gorditas, tortillones y burritos</title>
+    <link rel="stylesheet" href="normalice.css"> <!--link para normalizar la pagina, para que se vea igual en todos los navegadores -->
+
+    <!--estos son tipos de letras que use para el h1 y h2-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="estilo.css"> 
+
+</head>
+
+
+<body>
+    <header class="header-hero" id="inicio">
+    <div class="contenido-hero contenedor">
+        <h1>EL VERDADERO ANTOJO,<br> TIENE FORMA DE GORDITA</h1>
+        <h2>Gorditas, tortillones y burritos preparados con amor y tradición</h2>
+    </div>
+  </header>
+
+ 
+    <div class="navegador">
+        <div class="contenedor contenido-navegador">
+            <a href="proyecto.html" class="logo-link">
+                <img src="imagenes/Gordilonalogo.png" alt="Logo" class="logo-img">
+            </a>
+
+            <nav class="navegacion-principal">
+                <a href="#inicio">INICIO</a>
+                <a href="#menu">MENÚ</a>
+                <a href="#ubicacion">UBICACIÓN</a>
+                <a href="#nosotros">NOSOTROS</a>
+                <a href="#contacto">REDES</a>
+            </nav>
+
+            <!-- Carrito en la barra de navegación -->
+            <a href="#pedido" class="carrito-nav" aria-label="Ver mi carrito">
+                🛒 <span class="carrito-nav__num"></span>
+            </a>
+        </div> 
+    </div> 
+    
+    <!-- ====menu===========================================================================================================================-->
+    <div class="menu contenedor" id="menu">
+
+  <!-- Encabezado -->
+  <div class="encabezado-menu">
+    <span class="subtitulo-comal">LO BUENO DEL COMAL</span>
+    <h2>Nuestro Menú de Antojos</h2>
+    <p>Selecciona tu especialidad favorita y escoge entre nuestros guisados recién preparados.</p>
+  </div>
+
+  <!-- Pestañas -->
+  <div class="categorias-tabs">
+    <button class="tab-btn activo">Los más pedidos</button>
+    <button class="tab-btn">Gorditas</button>
+    <button class="tab-btn">Tortillones</button>
+    <button class="tab-btn">Burritos</button>
+  </div>
+
+  <!-- Grid de tarjetas -->
+  <div class="grid-tarjetas">
+
+    <!-- Tarjeta: Gordita Tradicional de Harina o Maíz -->
+    <article class="tarjeta-platillo">
+      <div class="imagen-contenedor">
+        <img src="imagenes/gordita-menu.jpeg" alt="Gorditas de harina o maíz">
+        <span class="precio-tag">$20 MXN</span>
+      </div>
+      <div class="contenido-tarjeta">
+        <h3>Gordita Tradicional de Harina o Maíz</h3>
+        <p>Masa de harina o maíz dorada al comal, rellenita de tu guisado favorito.</p>
+
+        <details class="guisos-desplegable">
+          <summary class="btn-guisos">Ver guisos <span class="flecha">▾</span></summary>
+          <ul class="lista-guisos">
+            <li>Chicharrón prensado</li>
+            <li>Chicharrón peya</li>
+            <li>Frijoles refritos</li>
+            <li>Asado rojo</li>
+            <li>Picadillo</li>
+            <li>Papas rojas</li>
+            <li>Papas verdes</li>
+            <li>Discada</li>
+            <li>Mole</li>
+            <li>Huevo con salsa verde</li>
+            <li>Huevo con salsa roja</li>
+            <li>Deshebrada</li>
+            <li>Bistec</li>
+          </ul>
+        </details>
+
+        <div class="pie-tarjeta">
+          <span class="detalle-guisado">Elige el guiso de tu agrado</span>
+          <a href="#pedido" class="btn-pedir">Pedir &gt;</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Tarjeta: Tortillones -->
+    <article class="tarjeta-platillo">
+      <div class="imagen-contenedor">
+        <img src="imagenes/tortillon-menu.jpeg" alt="Tortillones">
+        <span class="precio-tag">$60 MXN</span>
+      </div>
+      <div class="contenido-tarjeta">
+        <h3>Tortillones</h3>
+        <p>Deliciosos tortillones hechos con masa de maíz y rellenos de tu elección.</p>
+
+        <details class="guisos-desplegable">
+          <summary class="btn-guisos">Ver guisos <span class="flecha">▾</span></summary>
+          <ul class="lista-guisos">
+            <li>Chicharrón prensado</li>
+            <li>Chicharrón peya</li>
+            <li>Frijoles refritos</li>
+            <li>Asado rojo</li>
+            <li>Picadillo</li>
+            <li>Papas rojas</li>
+            <li>Papas verdes</li>
+            <li>Discada</li>
+            <li>Mole</li>
+            <li>Huevo con salsa verde</li>
+            <li>Huevo con salsa roja</li>
+            <li>Deshebrada</li>
+            <li>Bistec</li>
+          </ul>
+        </details>
+
+        <div class="pie-tarjeta">
+          <span class="detalle-guisado">Elige el guiso de tu agrado</span>
+          <a href="#pedido" class="btn-pedir">Pedir &gt;</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Tarjeta: Burritos -->
+    <article class="tarjeta-platillo">
+      <div class="imagen-contenedor">
+        <img src="imagenes/burrito-menu.jpeg" alt="Burritos">
+        <span class="precio-tag">$22 MXN</span>
+      </div>
+      <div class="contenido-tarjeta">
+        <h3>Burritos</h3>
+        <p>Deliciosos burritos rellenos de tu guiso favorito y acompañados con nuestras salsas especiales.</p>
+
+        <details class="guisos-desplegable">
+          <summary class="btn-guisos">Ver guisos <span class="flecha">▾</span></summary>
+          <ul class="lista-guisos">
+            <li>Chicharrón prensado</li>
+            <li>Chicharrón peya</li>
+            <li>Frijoles refritos</li>
+            <li>Asado rojo</li>
+            <li>Picadillo</li>
+            <li>Papas rojas</li>
+            <li>Papas verdes</li>
+            <li>Discada</li>
+            <li>Mole</li>
+            <li>Huevo con salsa verde</li>
+            <li>Huevo con salsa roja</li>
+            <li>Deshebrada</li>
+            <li>Bistec</li>
+          </ul>
+        </details>
+
+        <div class="pie-tarjeta">
+          <span class="detalle-guisado">Elige el guiso de tu agrado</span>
+          <a href="#pedido" class="btn-pedir">Pedir &gt;</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+
+
+    <!-- SECCIÓN UBICACIÓN C -->
+     
+    <section id="ubicacion" class="seccion-ubicacion">
+        <h2>UBICACIÓN Y HORARIOS</h2>
+        <div class="grid-ubicacion">
+            <div class="datos-contacto">
+                <p><strong>📍 Dirección:</strong> Boulevard Laguna Sur 1079, Colonia Lazaro Cardenas</p>
+                <p><strong>🕒 Horario:</strong> Lunes a Domingo de 6:30 PM a 11:30 PM</p>
+                <p><strong>📞 Teléfono:</strong> 8717876027</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         SECCIÓN NOSOTROS
+         ===================================================== -->
+    <section id="nosotros" class="seccion-nosotros">
+        <div class="nosotros-grid contenedor">
+
+            <div class="nosotros-foto">
+                <img src="imagenes/nosotros.png" alt="Preparando gorditas en el comal">
+            </div>
+
+            <div class="nosotros-contenido">
+                <span class="subtitulo-comal">NUESTRA HISTORIA</span>
+                <h2>Del comal a tu mesa</h2>
+                <p>
+                   Dos amigos, un gran apetito y una idea muy clara: hacer la gordita mejor servida. Así nació La Gordiflona; la llamamos así porque nuestro tamaño destaca y está pensado para satisfacer de verdad.
+                </p>
+                <p>
+                   Amasamos a diario, guisamos con calma y te servimos con una sonrisa. Queremos que cada mordida te recuerde que lo bueno se hace con paciencia y cariño.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Tarjetas con lo que nos distingue -->
+        <div class="valores contenedor">
+            <article class="valor">
+                <h3>Hecho al momento</h3>
+                <p>Tu pedido sale del comal directo a tus manos.</p>
+            </article>
+            <article class="valor">
+                <h3>Calidad de ingredientes</h3>
+                <p>Guisos y salsas preparados cada día.</p>
+            </article>
+            <article class="valor">
+                <h3>Precios justos</h3>
+                <p>Antojos para todos los bolsillos.</p>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+          PEDIDO Y FORMAS DE PAGO
+         ===================================================== -->
+    <section id="pedido" class="seccion-pedido">
+
+        <div class="pedido-grid contenedor">
+
+            <!-- El formulario se envía a php/orden.php, que lo guarda en la base de datos -->
+            <form class="pedido-form" id="form-pedido" action="php/orden.php" method="post">
+                <h2>Haz tu pedido</h2>
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="871 000 0000" required>
+
+                <span class="etiqueta-campo">¿Qué se te antoja?</span>
+                <div class="productos-pedido">
+                    <div class="producto-fila fila-g" data-nombre="Gorditas" data-precio="20">
+                        <div class="producto-info">
+                            <strong>Gorditas</strong>
+                            <span class="producto-precio">$20 c/u</span>
+                        </div>
+                        <div class="contador">
+                            <button type="button" class="btn-restar" aria-label="Restar una gordita">-</button>
+                            <span class="numero">0</span>
+                            <input type="hidden" name="cantidad_gordita" value="0">
+                            <button type="button" class="btn-sumar" aria-label="Sumar una gordita">+</button>
+                        </div>
+                        <div class="guiso-fila guiso-g">
+                            <label for="guiso-gordita">¿De qué guiso?</label>
+                            <select class="select-guiso" id="guiso-gordita" name="guiso_gordita">
+                                <option>Chicharrón prensado</option>
+                                <option>Chicharrón peya</option>
+                                <option>Frijoles refritos</option>
+                                <option>Asado rojo</option>
+                                <option>Picadillo</option>
+                                <option>Papas rojas</option>
+                                <option>Papas verdes</option>
+                                <option>Discada</option>
+                                <option>Mole</option>
+                                <option>Huevo con salsa verde</option>
+                                <option>Huevo con salsa roja</option>
+                                <option>Deshebrada</option>
+                                <option>Bistec</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="producto-fila fila-t" data-nombre="Tortillones" data-precio="60">
+                        <div class="producto-info">
+                            <strong>Tortillones</strong>
+                            <span class="producto-precio">$60 c/u</span>
+                        </div>
+                        <div class="contador">
+                            <button type="button" class="btn-restar" aria-label="Restar un tortillón">-</button>
+                            <span class="numero">0</span>
+                            <input type="hidden" name="cantidad_tortillon" value="0">
+                            <button type="button" class="btn-sumar" aria-label="Sumar un tortillón">+</button>
+                        </div>
+                        <div class="guiso-fila guiso-t">
+                            <label for="guiso-tortillon">¿De qué guiso?</label>
+                            <select class="select-guiso" id="guiso-tortillon" name="guiso_tortillon">
+                                <option>Chicharrón prensado</option>
+                                <option>Chicharrón peya</option>
+                                <option>Frijoles refritos</option>
+                                <option>Asado rojo</option>
+                                <option>Picadillo</option>
+                                <option>Papas rojas</option>
+                                <option>Papas verdes</option>
+                                <option>Discada</option>
+                                <option>Mole</option>
+                                <option>Huevo con salsa verde</option>
+                                <option>Huevo con salsa roja</option>
+                                <option>Deshebrada</option>
+                                <option>Bistec</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="producto-fila fila-b" data-nombre="Burritos" data-precio="22">
+                        <div class="producto-info">
+                            <strong>Burritos</strong>
+                            <span class="producto-precio">$22 c/u</span>
+                        </div>
+                        <div class="contador">
+                            <button type="button" class="btn-restar" aria-label="Restar un burrito">-</button>
+                            <span class="numero">0</span>
+                            <input type="hidden" name="cantidad_burrito" value="0">
+                            <button type="button" class="btn-sumar" aria-label="Sumar un burrito">+</button>
+                        </div>
+                        <div class="guiso-fila guiso-b">
+                            <label for="guiso-burrito">¿De qué guiso?</label>
+                            <select class="select-guiso" id="guiso-burrito" name="guiso_burrito">
+                                <option>Chicharrón prensado</option>
+                                <option>Chicharrón peya</option>
+                                <option>Frijoles refritos</option>
+                                <option>Asado rojo</option>
+                                <option>Picadillo</option>
+                                <option>Papas rojas</option>
+                                <option>Papas verdes</option>
+                                <option>Discada</option>
+                                <option>Mole</option>
+                                <option>Huevo con salsa verde</option>
+                                <option>Huevo con salsa roja</option>
+                                <option>Deshebrada</option>
+                                <option>Bistec</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <fieldset>
+                    <legend>¿Cómo lo quieres?</legend>
+                    <label class="opcion"><input type="radio" name="tipo" value="aqui" checked> Comer aquí</label>
+                    <label class="opcion"><input type="radio" name="tipo" value="llevar"> Para llevar</label>
+                </fieldset>
+
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" rows="3" placeholder="Sin picante, con todo, etc."></textarea>
+
+                <button type="submit" class="btn-enviar">Enviar pedido y pagar</button>
+            </form>
+
+            <div class="pedido-lateral">
+                <!--carrito lateral -->
+                <aside class="carrito">
+                    <h3>Tu carrito 🛒</h3>
+                    <p class="carrito-vacio">Aún no agregas nada. Usa el botón + en tu pedido.</p>
+                    <ul class="carrito-lista"></ul>
+                    <div class="carrito-total">
+                        <span>Total</span>
+                        <strong class="total-num">$0</strong>
+                    </div>
+                </aside>
+
+                <aside class="pago-info">
+                <h3>Formas de pago</h3>
+                <p>Pagas en línea con PayPal: con tu cuenta o con tarjeta.</p>
+                <img src="imagenes/paypal.png" alt="Métodos de pago: PayPal y tarjetas">
+                <p class="pago-nota">Al enviar tu pedido pasarás a la página de pago.</p>
+                </aside>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER CON REDES SOCIALES -->
+    <footer id="contacto">
+        <p>2026 La gordiflona.</p>
+        <div class="redes-sociales">
+          <a href="https://www.facebook.com/share/18YFENtcpm/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a> |
+          <a href="https://instagram.com/rubiihdezz?mdxt=YXk1cDRqcTRneHd3&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a> |
+          <a href="https://www.tiktok.com/@valcthd" target="_blank" rel="noopener noreferrer">TikTok</a>
+        </div>
+        <p style="margin:14px 0 0;font-size:.85rem;"><a href="php/admin/login.php" style="color:rgba(255,255,255,.6);">Acceso administrador</a></p>
+    </footer>
+
+    <script>
+    // Carrito: contadores, resumen lateral, total y campos ocultos del formulario
+    (function () {
+        var form = document.getElementById('form-pedido');
+        var filas = form.querySelectorAll('.producto-fila');
+        var lista = document.querySelector('.carrito-lista');
+        var vacio = document.querySelector('.carrito-vacio');
+        var totalEl = document.querySelector('.total-num');
+        var navNum = document.querySelector('.carrito-nav__num');
+
+        function actualizar() {
+            var total = 0, piezas = 0;
+            lista.innerHTML = '';
+            filas.forEach(function (fila) {
+                var cant = parseInt(fila.querySelector('input[type="hidden"]').value, 10) || 0;
+                var precio = parseInt(fila.dataset.precio, 10);
+                fila.querySelector('.numero').textContent = cant;
+                if (cant > 0) {
+                    var li = document.createElement('li');
+                    li.className = 'linea';
+                    var a = document.createElement('span');
+                    a.textContent = cant + ' × ' + fila.dataset.nombre;
+                    var b = document.createElement('strong');
+                    b.textContent = '$' + (cant * precio);
+                    li.appendChild(a); li.appendChild(b);
+                    lista.appendChild(li);
+                }
+                total += cant * precio;
+                piezas += cant;
+            });
+            vacio.style.display = piezas === 0 ? 'block' : 'none';
+            totalEl.textContent = '$' + total;
+            navNum.textContent = piezas > 0 ? piezas : '';
+        }
+
+        filas.forEach(function (fila) {
+            var campo = fila.querySelector('input[type="hidden"]');
+            fila.querySelector('.btn-sumar').addEventListener('click', function () {
+                campo.value = Math.min((parseInt(campo.value, 10) || 0) + 1, 50);
+                actualizar();
+            });
+            fila.querySelector('.btn-restar').addEventListener('click', function () {
+                campo.value = Math.max((parseInt(campo.value, 10) || 0) - 1, 0);
+                actualizar();
+            });
+        });
+
+        // No enviar si el carrito está vacío
+        form.addEventListener('submit', function (e) {
+            var piezas = 0;
+            filas.forEach(function (f) { piezas += parseInt(f.querySelector('input[type="hidden"]').value, 10) || 0; });
+            if (piezas === 0) {
+                e.preventDefault();
+                alert('Agrega al menos una pieza a tu pedido con el botón +');
+            }
+        });
+
+        actualizar();
+    })();
+    </script>
+</body>
+</html>
